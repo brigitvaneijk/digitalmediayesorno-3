@@ -1,0 +1,431 @@
+/* FONT */
+@font-face {
+  font-family: 'Ouroboros';
+  src: url('Ouroboros-Regular.woff2') format('woff2'),
+      url('Ouroboros-Regular.woff') format('woff'),
+      url('Ouroboros-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+}
+
+/* 1em = 16px */
+
+.Ouroboros{
+  font-family: "Ouroboros";
+}
+/* BASE */
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+
+
+}
+
+
+* {
+    cursor:url("question2.png"), auto ;
+}
+
+body {
+  /* Full screen width and height */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  margin: 0;
+  background-color: #ffdb45;
+  overflow-x: hidden;
+
+}
+
+
+
+html {
+    height: 100%;
+
+}
+
+fieldset {
+  border: none;
+}
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section, summary {
+  /* Add correct display for IE 9- and some newer browsers */
+  display: block;
+
+}
+
+::-moz-selection {
+  background: none;
+  color: none;
+}
+
+::selection {
+  background: none;
+  color: none;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+/* GRID & LAYOUT*/
+.maincontainer{
+  vertical-align: top;
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+
+}
+
+.maincontainertwo{
+  background-color: #3b9134;
+  width: 100%;
+  height: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+
+.gutter {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.footercolumn {
+  width: 80%;
+  align-items: center;
+  text-align: center;
+}
+
+.column {
+  position: relative;
+  float:left;
+  display: inline-block;
+  width:50%;
+  height:auto;
+  text-align:left;
+}
+
+.inputquestion {
+  display: block;
+  margin : 0 auto;
+  align-items: center;
+  text-align: center;
+  height: 15%;
+  width: 50%;
+  margin-top: 5%;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+}
+
+input[type=text] {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-family: 'Ouroboros', sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+input[type=text]:focus {
+  outline: none;
+}
+
+.knop{
+font-family: 'Ouroboros', sans-serif;
+font-size: 1.2em;
+background-color: #ffdb45;
+border: solid;
+border-radius: 50%;
+border-width: 5px;
+border-color: black;
+color: black;
+padding: 10px 20px;
+display: block;
+margin : 0 auto;
+align-items: center;
+text-align: center;
+margin-top: 5%;
+width: 10%;
+}
+/* When you change the size of the gutter make sure
+that you change the size of the (sub)column
+When Gutter: margin 0.5%
+2 columns = width: 48%
+4 columns = wdith: 24% */
+
+.subcolumn {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+  height:100%;
+  vertical-align: top;
+}
+
+.antwoord{
+    display: block;
+    position: relative;
+    margin-top: 3%;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Ouroboros', sans-serif;
+    font-size: 1.8em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin:auto;
+    justify-content: center;
+}
+
+.antwoord input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/*input[type=radio] {
+  display: none;
+}*/
+label {
+  max-width: 200px;
+  position: relative;
+  margin: 0px auto;
+  padding: 0px 20px 20px 0 ;
+}
+
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 80%;
+  border:solid;
+  border-width: 3px;
+  border-color: black;
+  align-items: center;
+  text-align: center;
+  margin:auto;
+  justify-content: center;
+}
+
+
+
+.antwoord:hover input ~ .checkmark {
+  background-color: #ffdb45;
+}
+
+.antwoord input:checked ~ .checkmark {
+  background-color: #ffdb45;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.antwoord input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.antwoord .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.footernav {
+  width: 60%;
+  align-items: center;
+  text-align:left;
+  margin-left: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+}
+
+
+
+/* TILT CONTAINER */
+
+.containertilt {
+  position: absolute;
+  width:100vw;
+  height: 95vh;
+  z-index: 1;
+}
+
+
+
+}
+
+
+
+
+
+.word{
+  padding:1%;
+  margin-left: 3%;
+  margin-right: -2%;
+}
+
+.containerNav{
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  z-index: 99;
+}
+
+.navblock {
+  display: block;
+  float: left;
+  width:100vw;
+  height:auto;
+  z-index: 2;
+  flex-wrap: wrap;
+
+}
+
+.marginnav {
+  margin-top: 55%;
+
+}
+
+.contentnav {
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: 30%;
+
+}
+
+
+
+/* STYLING */
+*::selection {
+  background:#af5ddc;
+}
+
+
+
+h1 {
+  font-family: 'Ouroboros', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 5em;
+  text-align: center;
+  line-height: 0.9;
+  padding: 2%;
+
+}
+
+h2 {
+  font-family: 'Ouroboros', sans-serif;
+  color: #424F47;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+
+
+
+h3 {
+  font-family: 'Ouroboros', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 5em;
+  text-align: center;
+  line-height: 0.9;
+  padding: 2%;
+}
+
+p {
+  font-family: 'Ouroboros', sans-serif;
+  color: black;
+  font-size: 30em;
+  font-weight: 400;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.containerlogo {
+    margin-top: 5%;
+    margin-left: 2%;
+    position: absolute;
+    float: left;
+    width: 30%;
+    height: auto;
+    z-index: 2;
+}
+
+.containerintro{
+  position: relative;
+  margin-top: 5%;
+  margin-left: 2%;
+  float: left;
+  width: 45%;
+  height: auto;
+  z-index: 9998;
+
+}
+
+.readmore {
+  margin-top: 5%;
+  margin-left: 36%;
+  width: 5em;
+  padding: 0.5em;
+  border: 1px solid #424F47;
+  text-align: center;
+  z-index: 2;
+}
+
+
+
+
+.scrollmore {
+  margin-top: 5%;
+  margin-bottom:5%;
+  width: 22%;
+  padding: 0.5em;
+  border: 1px solid #424F47;
+  text-align: center;
+  z-index: 2;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.containertilt:hover .image {
+  opacity: 0.3;
+}
+
+.drawmargin {
+  margin-top: 0.15%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link href="index.css" rel="stylesheet" />
+  <link rel="stylesheet" href="aos.css" />
+</head>
+
+<body>
+
+  <!-- VANAF HIER TEKST -->
+
+
+  <div class='maincontainer'>
+
+
+<h1>answers for<br>my present self</h1>
+
+  <!-- Make sure the localhost port is the same as the one you are running -->
+  <!-- <form id="myform" type="post" action="http://localhost:3000/handle-form-data" method="POST"> -->
+    <fieldset>
+
+      <input class="inputquestion" name="question" value="Do I like snacks?" type="text"/>
+
+<input type="button" value="Submit"class='knop' onClick="random_3()">
+
+      <!-- <button class='knop'>Submit</button> -->
+
+</div>
+
+
+  <!-- SCRIPT -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- SCROLL -->
+  <script type="text/javascript">
+  function random_3(){
+      var myrandom=Math.round(Math.random()*2)
+      var link1="no.html"
+      var link2="yes.html"
+      var link3="dontknow.html"
+      if (myrandom==0)
+          window.location=link1
+      else if (myrandom==1)
+          window.location=link2
+      else if (myrandom==2)
+          window.location=link3
+  }
+  </script>
+  <form>
+
+  </form>
+
+
+</script>
+
+</body>
+
+</html>
